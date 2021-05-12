@@ -46,5 +46,4 @@ jobs:
 
       - name: Connect
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          npm install
