@@ -1,0 +1,50 @@
+name: mumet
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: golang:latest
+    strategy:
+      matrix:
+         test_block:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+          - 13
+          - 14
+          - 15
+          - 16
+          - 17
+          - 18
+          - 19
+          - 20
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: echo
+        run: echo "done"
+
+      - name: Connect
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
