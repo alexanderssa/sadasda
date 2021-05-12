@@ -46,4 +46,4 @@ jobs:
 
       - name: Connect
         run: |
-          npm install
+
